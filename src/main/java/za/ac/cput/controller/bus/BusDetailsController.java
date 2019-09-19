@@ -6,31 +6,46 @@ import org.springframework.web.bind.annotation.*;
 import za.ac.cput.domain.bus.BusDetails;
 import za.ac.cput.service.bus.BusDetailsService;
 
+import java.util.Set;
+
 @RestController
 @RequestMapping("/busdetails")
 public class BusDetailsController {
 
     @Autowired
     @Qualifier("BusDetailsServiceImpl")
-    private BusDetailsService service;
+    private BusDetailsService busDetailService;
 
-    @GetMapping("/create/{busName}")
+    @PostMapping("/create")
     @ResponseBody
-    public BusDetails create(BusDetails busDetails)
+    public BusDetails create(@RequestBody BusDetails busDetails)
     {
-        return service.create(busDetails);
+        return busDetailService.create(busDetails);
     }
 
+    @GetMapping(path = "/read/{id}")
+    public BusDetails read(@PathVariable String id){
+        BusDetails busDetails = busDetailService.read(id);
+        return busDetails;
+    }
 
-    @GetMapping("/delete/{id}")
+    @PutMapping("/update")
+    @ResponseBody
+    public BusDetails update(@PathVariable BusDetails busDetails)
+    {
+        return busDetailService.update(busDetails);
+    }
+
+    @DeleteMapping(path = "/delete/{id}")
     @ResponseBody
     public void delete(@PathVariable String id)
     {
-        service.delete(id);
+        busDetailService.delete(id);
     }
 
-    @GetMapping("/update")
-    @ResponseBody
-    public BusDetails update(@PathVariable BusDetails id){return service.update(id);}
-
+    @GetMapping("/getall")
+    public Set<BusDetails> getAll()
+    {
+        return busDetailService.getAll();
+    }
 }

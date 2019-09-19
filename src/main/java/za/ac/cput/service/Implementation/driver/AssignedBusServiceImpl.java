@@ -1,5 +1,6 @@
 package za.ac.cput.service.Implementation.driver;
 
+import org.springframework.stereotype.Service;
 import za.ac.cput.domain.driver.AssignedBus;
 import za.ac.cput.service.driver.AssignedBusService;
 import za.ac.cput.repositories.driverRepository.AssignedBusRepository;
@@ -7,6 +8,7 @@ import za.ac.cput.repositories.implimentation.driverRepositoryImpl.AssignedBusRe
 
 import java.util.Set;
 
+@Service("AssignedBusServiceImpl")
 public class AssignedBusServiceImpl implements AssignedBusService {
 
     private static AssignedBusServiceImpl service = null;

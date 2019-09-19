@@ -1,5 +1,6 @@
 package za.ac.cput.service.Implementation.driver;
 
+import org.springframework.stereotype.Service;
 import za.ac.cput.domain.driver.DriverDetails;
 import za.ac.cput.service.driver.DriverDetailsService;
 import za.ac.cput.repositories.driverRepository.DriverDetailsRepository;
@@ -7,6 +8,7 @@ import za.ac.cput.repositories.implimentation.driverRepositoryImpl.DriverDetails
 
 import java.util.Set;
 
+@Service("DriverDetailsServiceImpl")
 public class DriverDetailsServiceImpl  implements DriverDetailsService {
 
     private static DriverDetailsServiceImpl service = null;

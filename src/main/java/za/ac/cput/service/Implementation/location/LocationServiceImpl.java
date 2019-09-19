@@ -1,5 +1,6 @@
 package za.ac.cput.service.Implementation.location;
 
+import org.springframework.stereotype.Service;
 import za.ac.cput.domain.location.Location;
 import za.ac.cput.service.location.LocationService;
 import za.ac.cput.repositories.locationRepository.LocationRepository;
@@ -7,6 +8,7 @@ import za.ac.cput.repositories.implimentation.locationRepositoryImpl.LocationRep
 
 import java.util.Set;
 
+@Service("LocationServiceImpl")
 public class LocationServiceImpl implements LocationService {
 
     private static LocationServiceImpl service = null;

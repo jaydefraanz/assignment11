@@ -1,5 +1,6 @@
 package za.ac.cput.service.Implementation.card;
 
+import org.springframework.stereotype.Service;
 import za.ac.cput.domain.card.BalanceCheck;
 import za.ac.cput.service.card.BalanceCheckService;
 import za.ac.cput.repositories.cardRepository.BalanceCheckRepository;
@@ -7,6 +8,7 @@ import za.ac.cput.repositories.implimentation.cardRepositoryImp.BalanceCheckRepo
 
 import java.util.Set;
 
+@Service("BalanceCheckServiceImpl")
 public class BalanceCheckServiceImpl implements BalanceCheckService {
 
     private static BalanceCheckServiceImpl service = null;

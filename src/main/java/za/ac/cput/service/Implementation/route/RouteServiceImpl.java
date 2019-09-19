@@ -1,5 +1,6 @@
 package za.ac.cput.service.Implementation.route;
 
+import org.springframework.stereotype.Service;
 import za.ac.cput.domain.route.Route;
 import za.ac.cput.service.route.RouteService;
 import za.ac.cput.repositories.routeRepository.RouteRepository;
@@ -7,6 +8,7 @@ import za.ac.cput.repositories.implimentation.routeRepositoryImpl.RouteRepositor
 
 import java.util.Set;
 
+@Service("RouteServiceImpl")
 public class RouteServiceImpl implements RouteService {
 
     private static RouteServiceImpl service = null;

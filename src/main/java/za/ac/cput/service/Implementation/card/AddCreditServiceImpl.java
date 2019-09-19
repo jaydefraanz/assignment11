@@ -1,5 +1,6 @@
 package za.ac.cput.service.Implementation.card;
 
+import org.springframework.stereotype.Service;
 import za.ac.cput.domain.card.AddCredit;
 import za.ac.cput.service.card.AddCreditService;
 import za.ac.cput.repositories.cardRepository.AddCreditRepository;
@@ -7,6 +8,7 @@ import za.ac.cput.repositories.implimentation.cardRepositoryImp.AddCreditReposit
 
 import java.util.Set;
 
+@Service("AddCreditServiceImpl")
 public class AddCreditServiceImpl implements AddCreditService {
 
     private static AddCreditServiceImpl service = null;

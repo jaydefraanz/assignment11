@@ -1,5 +1,6 @@
 package za.ac.cput.service.Implementation.commutors;
 
+import org.springframework.stereotype.Service;
 import za.ac.cput.domain.commutors.Adult;
 import za.ac.cput.service.commutors.AdultCommutorService;
 import za.ac.cput.repositories.commutorsRepository.AdultCommutorRepository;
@@ -7,6 +8,7 @@ import za.ac.cput.repositories.implimentation.commutorsRepositoryImpl.AdultCommu
 
 import java.util.Set;
 
+@Service("AdultCommutorServiceImpl")
 public class AdultCommutorServiceImpl implements AdultCommutorService {
 
     private static AdultCommutorServiceImpl service = null;
