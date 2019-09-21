@@ -1,4 +1,4 @@
-package za.ac.cput.controller;
+package za.ac.cput.controller.bus;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
