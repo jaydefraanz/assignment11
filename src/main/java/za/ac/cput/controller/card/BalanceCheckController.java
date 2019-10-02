@@ -13,7 +13,7 @@ import java.util.Set;
 public class BalanceCheckController {
 
     @Autowired
-    @Qualifier("BalanceCheckServiceImpl")
+    //@Qualifier("BalanceCheckServiceImpl")
     private BalanceCheckService balanceCheckService;
 
     @PostMapping("/create")

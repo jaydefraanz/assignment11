@@ -13,7 +13,7 @@ import java.util.Set;
 public class DriverContactController {
 
     @Autowired
-    @Qualifier("DriverContactServiceImpl")
+    //@Qualifier("DriverContactServiceImpl")
     private DriverContactService driverContactService;
 
     @PostMapping("/create")

@@ -13,7 +13,7 @@ import java.util.Set;
 public class PaymentDetailsController {
 
     @Autowired
-    @Qualifier("PaymentDetailsServiceImpl")
+    //@Qualifier("PaymentDetailsServiceImpl")
     private PaymentDetailService paymentDetailService;
 
     @PostMapping("/create")

@@ -13,7 +13,7 @@ import java.util.Set;
 public class AdultCommutorController {
 
     @Autowired
-    @Qualifier("AdultCommutorServiceImpl")
+    //@Qualifier("AdultCommutorServiceImpl")
     private AdultCommutorService adultCommutorService;
 
     @PostMapping("/create")

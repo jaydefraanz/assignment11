@@ -13,7 +13,7 @@ import java.util.Set;
 public class DestinationStationController {
 
     @Autowired
-    @Qualifier("DestinationStationServiceImpl")
+    //@Qualifier("DestinationStationServiceImpl")
     private DestinationStationService destinationStationService;
 
     @PostMapping("/create")

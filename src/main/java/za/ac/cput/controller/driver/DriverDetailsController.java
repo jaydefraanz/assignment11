@@ -13,7 +13,7 @@ import java.util.Set;
 public class DriverDetailsController {
 
     @Autowired
-    @Qualifier("DriverDetailsServiceImpl")
+   // @Qualifier("DriverDetailsServiceImpl")
     private DriverDetailsService driverDetailsService;
 
     @PostMapping("/create")

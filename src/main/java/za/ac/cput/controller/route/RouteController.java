@@ -13,7 +13,7 @@ import java.util.Set;
 public class RouteController {
 
     @Autowired
-    @Qualifier("RouteServiceImpl")
+    //@Qualifier("RouteServiceImpl")
     private RouteService routeService;
 
     @PostMapping("/create")

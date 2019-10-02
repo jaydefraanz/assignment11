@@ -13,7 +13,7 @@ import java.util.Set;
 public class LocationController {
 
     @Autowired
-    @Qualifier("LocationServiceImpl")
+    //@Qualifier("LocationServiceImpl")
     private LocationService locationService;
 
     @PostMapping

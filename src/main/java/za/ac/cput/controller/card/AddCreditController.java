@@ -13,7 +13,7 @@ import java.util.Set;
 public class AddCreditController {
 
     @Autowired
-    @Qualifier("AddCreditServiceImpl")
+    //@Qualifier("AddCreditServiceImpl")
     private AddCreditService addCreditService;
 
     @PostMapping("/create")
