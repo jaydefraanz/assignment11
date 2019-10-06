@@ -1,5 +1,6 @@
 package za.ac.cput.repositories.implimentation.busRepositoryImp;
 
+import org.springframework.stereotype.Repository;
 import za.ac.cput.domain.bus.BusDetails;
 import za.ac.cput.repositories.busRepository.BusDetailsRepository;
 
@@ -7,6 +8,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
+@Repository
 public class BusDetailRepositoryImpl implements BusDetailsRepository {
 
     private static BusDetailsRepository repository = null;

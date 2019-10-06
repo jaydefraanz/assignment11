@@ -1,5 +1,6 @@
 package za.ac.cput.repositories.implimentation.cardRepositoryImp;
 
+import org.springframework.stereotype.Repository;
 import za.ac.cput.domain.card.AddCredit;
 import za.ac.cput.repositories.cardRepository.AddCreditRepository;
 
@@ -7,6 +8,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
+@Repository
 public class AddCreditRepositoryImpl implements AddCreditRepository {
 
     public static AddCreditRepository repository = null;

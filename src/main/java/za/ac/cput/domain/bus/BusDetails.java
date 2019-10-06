@@ -1,10 +1,22 @@
 package za.ac.cput.domain.bus;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.Objects;
 
+@Entity
 public class BusDetails {
-    String busNo, busName, busSeats;
 
+    @Id
+    @GeneratedValue
+    @Column(name = "id")
+    private String busNo;
+    @Column(name="name")
+    private String busName;
+    @Column(name = "seats")
+    private String busSeats;
 
 
     public BusDetails(Builder builder) {

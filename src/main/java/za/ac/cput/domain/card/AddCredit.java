@@ -1,8 +1,20 @@
 package za.ac.cput.domain.card;
 
+import za.ac.cput.domain.bus.BusDetails;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class AddCredit extends Card
 {
+    @Id
+    @GeneratedValue
+    @Column(name = "amt")
     int amount;
+
 
     public AddCredit() {
     }
@@ -19,7 +31,7 @@ public class AddCredit extends Card
     public static class Builder extends Card.Builder{
         int amount;
 
-        public Builder amount(int amount) {
+        public AddCredit.Builder amount(int amount) {
             this.amount = amount;
             return this;
         }
