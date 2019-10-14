@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: factoryTest.feeTest.PublicHolidayFeeFactoryTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.001 s <<< FAILURE! - in factoryTest.feeTest.PublicHolidayFeeFactoryTest
+getPublicHolidayFee(factoryTest.feeTest.PublicHolidayFeeFactoryTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError
+	at factoryTest.feeTest.PublicHolidayFeeFactoryTest.getPublicHolidayFee(PublicHolidayFeeFactoryTest.java:18)
+

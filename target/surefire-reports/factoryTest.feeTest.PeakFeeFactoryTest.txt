@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: factoryTest.feeTest.PeakFeeFactoryTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.002 s <<< FAILURE! - in factoryTest.feeTest.PeakFeeFactoryTest
+getPeakFee(factoryTest.feeTest.PeakFeeFactoryTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError
+	at factoryTest.feeTest.PeakFeeFactoryTest.getPeakFee(PeakFeeFactoryTest.java:19)
+

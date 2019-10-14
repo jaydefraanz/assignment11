@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: factoryTest.feeTest.OffPeakFactoryTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0 s <<< FAILURE! - in factoryTest.feeTest.OffPeakFactoryTest
+getOffPeakFee(factoryTest.feeTest.OffPeakFactoryTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError
+	at factoryTest.feeTest.OffPeakFactoryTest.getOffPeakFee(OffPeakFactoryTest.java:18)
+

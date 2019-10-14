@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: factoryTest.commutorTest.ChildFactoryTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.002 s <<< FAILURE! - in factoryTest.commutorTest.ChildFactoryTest
+getChild(factoryTest.commutorTest.ChildFactoryTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: expected:<0> but was:<13>
+	at factoryTest.commutorTest.ChildFactoryTest.getChild(ChildFactoryTest.java:19)
+

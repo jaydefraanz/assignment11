@@ -1,6 +1,7 @@
 package za.ac.cput.factory.bus;
 
 import za.ac.cput.domain.bus.BusDetails;
+import za.ac.cput.helper.Misc;
 
 public class BusDetailsFactory
 {
@@ -8,7 +9,7 @@ public class BusDetailsFactory
     {
         return new BusDetails.Builder()
                 .busName(busName)
-                .busNo(busNo)
+                .busNo(Misc.generateId())
                 .busSeats(seats)
                 .build();
     }

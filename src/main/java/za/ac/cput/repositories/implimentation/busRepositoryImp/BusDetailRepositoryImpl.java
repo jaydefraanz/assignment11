@@ -4,11 +4,9 @@ import org.springframework.stereotype.Repository;
 import za.ac.cput.domain.bus.BusDetails;
 import za.ac.cput.repositories.busRepository.BusDetailsRepository;
 
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.*;
 
-@Repository
+@Repository("BusDetailsInMemory")
 public class BusDetailRepositoryImpl implements BusDetailsRepository {
 
     private static BusDetailsRepository repository = null;
@@ -71,8 +69,8 @@ public class BusDetailRepositoryImpl implements BusDetailsRepository {
 
     @Override
     public BusDetails read(String s) {
-        return null;
+        return this.busDetails.stream()
+                .filter(bus -> bus.getBusNo().equalsIgnoreCase(s))
+                .findAny().orElse(null);
     }
-
-
 }

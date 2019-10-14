@@ -1,5 +1,7 @@
 package za.ac.cput.domain.bus;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,14 +12,15 @@ import java.util.Objects;
 public class BusDetails {
 
     @Id
-    @GeneratedValue
-    @Column(name = "id")
+    @GeneratedValue(generator = "uuid")
+    @GenericGenerator(name = "uuid", strategy = "uuid")
     private String busNo;
-    @Column(name="name")
+    @Column(name="Name")
     private String busName;
-    @Column(name = "seats")
+    @Column(name = "Seats")
     private String busSeats;
 
+    public BusDetails(){}
 
     public BusDetails(Builder builder) {
         this.busNo = builder.busNo;
@@ -37,8 +40,20 @@ public class BusDetails {
         return busSeats;
     }
 
+    public void setBusNo(String busNo) {
+        this.busNo = busNo;
+    }
+
+    public void setBusName(String busName) {
+        this.busName = busName;
+    }
+
+    public void setBusSeats(String busSeats) {
+        this.busSeats = busSeats;
+    }
+
     public static class Builder {
-        String busNo, busName, busSeats;
+        private String busNo, busName, busSeats;
 
         public Builder busNo(String busNo) {
             this.busNo = busNo;
@@ -53,11 +68,18 @@ public class BusDetails {
             return this;
         }
 
+        public Builder copy(BusDetails busDetails)
+        {
+            this.busNo = busDetails.busNo;
+            this.busName = busDetails.busName;
+            this.busSeats = busDetails.busSeats;
+            return this;
+        }
+
         public BusDetails build()
         {
             return new BusDetails(this);
         }
-
     }
 
     @Override

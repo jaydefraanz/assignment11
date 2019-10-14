@@ -2,10 +2,12 @@ package za.ac.cput.controller.bus;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import za.ac.cput.domain.bus.BusDetails;
 import za.ac.cput.service.bus.BusDetailsService;
 
+import java.awt.*;
 import java.util.Set;
 
 @RestController
@@ -13,10 +15,9 @@ import java.util.Set;
 public class BusDetailsController {
 
     @Autowired
-    //@Qualifier("BusDetailsServiceImpl")
     private BusDetailsService busDetailService;
 
-    @PostMapping("/create")
+    @PostMapping(value = "/create", consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public BusDetails create(@RequestBody BusDetails busDetails)
     {
@@ -25,19 +26,16 @@ public class BusDetailsController {
 
     @GetMapping(path = "/read/{id}")
     public BusDetails read(@PathVariable String id){
-        BusDetails busDetails = busDetailService.read(id);
-        return busDetails;
+        return busDetailService.read(id);
     }
 
     @PutMapping("/update")
-    @ResponseBody
-    public BusDetails update(@PathVariable BusDetails busDetails)
+    public void update(@RequestBody BusDetails busDetails)
     {
-        return busDetailService.update(busDetails);
+        busDetailService.update(busDetails);
     }
 
     @DeleteMapping(path = "/delete/{id}")
-    @ResponseBody
     public void delete(@PathVariable String id)
     {
         busDetailService.delete(id);

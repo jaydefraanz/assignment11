@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: repositoryTest.commutor.ChildCommutorRepositoryImplTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 0 s <<< FAILURE! - in repositoryTest.commutor.ChildCommutorRepositoryImplTest
+delete(repositoryTest.commutor.ChildCommutorRepositoryImplTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError
+	at repositoryTest.commutor.ChildCommutorRepositoryImplTest.delete(ChildCommutorRepositoryImplTest.java:82)
+
+getAll(repositoryTest.commutor.ChildCommutorRepositoryImplTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError
+	at repositoryTest.commutor.ChildCommutorRepositoryImplTest.getAll(ChildCommutorRepositoryImplTest.java:30)
+
+read(repositoryTest.commutor.ChildCommutorRepositoryImplTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException
+	at repositoryTest.commutor.ChildCommutorRepositoryImplTest.read(ChildCommutorRepositoryImplTest.java:95)
+
